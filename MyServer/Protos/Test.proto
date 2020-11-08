@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyServer";
+
+package greet;
+
+service OperacionMatematica {
+    // Sends a greeting
+    rpc Divide (DivisionRequest) returns (DivisionResponse);
+  }
+
+
+message DivisionRequest {
+    int32 dividendo = 1;
+    int32 divisor = 2;
+}
+
+message DivisionResponse {
+    int32 cociente = 1;
+    int32 residuo = 2;
+}
